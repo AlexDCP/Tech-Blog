@@ -1,11 +1,11 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
+{{!-- <!-- Loop over each object in the projects array -->
+{{#each post as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
+      <a href="/project/{{post.id}}">{{post.name}}</a>
     </h2>
     <p>
       <span for="img" aria-label="money">💲</span>
@@ -21,4 +21,13 @@
     </p>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+{{!-- <body>
+<nav >
+  <a href="/homepage" >Home</a>
+  <a href="/Dashboard" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Dashboard</a>
+  <a href="/login" id="logout" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</a>
+</nav>
+</body>
+<script src="/js/logout.js"></script> --}}
