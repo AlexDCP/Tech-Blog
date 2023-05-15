@@ -1,15 +1,16 @@
 {{!-- <body> --}}
-<div class="flex h-screen flex-col place-content-center items-center">
+<div class="flex h-screen flex-col place-content-center items-center break-all">
   {{#if posts.length}}
   <div>
   {{!-- Add validation if posts.length, map posts and render <a> to the edit-post</a> --}}
   {{#each posts as |post|}}
   <div>
-    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+    <div class="w-96  my-2 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
       <div class="mb-8">
         <div class="text-gray-900 font-bold text-xl mb-2">{{post.name}}</div>
         <p class="text-gray-700 text-base">{{post.description}}</p>
       </div>
+      <a href="/edit/{{post.id}}">Update Post</a>
     </div>
   </div>
   {{/each}}
@@ -22,5 +23,7 @@
     <a href='/single-post'>
     ➕ Create Post</a></button>
   </div>
+  
 </div>
+
 {{!-- </body> --}}
