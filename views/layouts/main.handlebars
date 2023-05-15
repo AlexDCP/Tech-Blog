@@ -13,12 +13,12 @@
 
 <body class="bg-rose-200">
       <nav class="bg-white dark:bg-lime-600 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto">
+        <div class="items-center justify-between w-full md:flex md:w-auto">
           <span class="mr-4 text-rose-200 underline font-mono text-[32px]">Tech-Blog</span>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <div class="flex flex-row px-4 md:p-4 mt-4 space-x-4 justify-between">
-        <a href="/homepage" 
+        <a href="/" 
           class=" py-2 pl-3 pr-4 bg-rose-200 hover:bg-violet-700 text-white font-bold rounded">
           Home</a>
         <a href="/dashboard" 

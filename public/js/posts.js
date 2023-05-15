@@ -1,9 +1,9 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
+  console.log('Event listener works');
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const name = document.querySelector('#title').value.trim();
+  const description = document.querySelector('#content').value.trim();
 
   if (name && description) {
     const response = await fetch(`/api/posts`, {
@@ -13,18 +13,14 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to create post');
-    }
+    setTimeout(() => {
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to create post');
+      }
+    }, 1000);
   }
 };
 
-
-document
-  .querySelector('.new-project-form')
-  .addEventListener('submit', newFormHandler);
-
-
+document.querySelector('#new-post').addEventListener('click', newFormHandler);
