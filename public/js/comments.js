@@ -16,9 +16,9 @@ const newCommentHandler = async (event) => {
     });
     setTimeout(() => {
         if (response.ok) {
-        document.location.replace('/homepage');
+        document.location.replace('/');
         } else {
-        alert('Failed to create post');
+        alert('Failed to post comment');
         }
     }, 1000);
     }
