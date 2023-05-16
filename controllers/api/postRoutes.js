@@ -21,7 +21,6 @@ router.get('/:id', async (req, res) =>{
       includes: [
         {
           model: Comment,
-          attributes: ['description'],
         },
       ],
     });
