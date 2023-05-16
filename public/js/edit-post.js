@@ -7,6 +7,7 @@ const updateButtonHandler = async (event) => {
   const description = document.querySelector('#content').value.trim();
 
   if (name && description) {
+    const id = event.target.getAttribute('data-id');
     const response = await fetch(`/api/posts/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ name, description }),

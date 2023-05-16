@@ -42,7 +42,7 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('single-post', {
+    res.render('comment', {
       ...post,
       logged_in: req.session.logged_in,
     });
