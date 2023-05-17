@@ -2,33 +2,26 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+The purpose of this blog was to create a website that could be used as a tech-blog for people to talk about their favorite coding facts, or just code in general! Sign-up today and get start interacting with other coders! The users can create posts, leave comments and much more. If you post something, don't worry, you can change your post or you can just delete it. Hope you enjoy Tech-Blog as much as I do!
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
+If you have any feedback feel free to leave a post on the blog and I will give it a look. This is the first full-stack application I have done on my own (with the guidance of good teachers), so any and all criticisms are appreciated!
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To use the Tech-Blog, you need to sign-up first and then from your dashboard you can create a post. From there you can update the post, or delete it. If you check out the homepage you will see all posts by every user, where you can start leaving comments.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+deployed site: https://tech-blog-hw.herokuapp.com/
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![alt text](/public/images/tech-blog.JPG)
 
 ## Credits
+
+Juno Nguyen -Tutor
+
+Mantas Andrijauskas -Instructor
+
+Diego Marrs - TA
+
+The guidance I received from these three was tremendous and greatly appreciated. Sometimes typos can be the bug!
