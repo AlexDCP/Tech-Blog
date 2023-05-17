@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -11,6 +11,9 @@ router.get('/', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
+        },
+        {
+          model: Comment,
         },
       ],
     });
@@ -28,7 +31,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// This is how we render each post individually.
+// This is how we render each post individually for comments.
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -51,7 +54,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-// This is the route to render the edit-post handlebars page, before the GET happens.
+// This is the route to render the edit-post handlebars page for updates
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {

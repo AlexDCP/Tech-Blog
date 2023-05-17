@@ -9,7 +9,11 @@
       <div class="flex items-center">
         <div class="text-sm">
           <p class="text-gray-900 leading-none">{{post.user.name}}</p>
-          <p class="text-gray-600">{{post.date_created}}</p>
+          <p class="text-gray-600">{{format_date post.date_created}} {{format_time post.date_created}}</p>
+          {{#each post.comments as |comment|}}
+          <p class="text-gray-700 text-base">{{comment.description}}</p>
+          <p class="text-gray-700 text-base">{{format_date comment.date_created}} {{format_time comment.date_created}}</p>
+          {{/each}}
         </div>
       </div>
       <a href="/post/{{post.id}}" 
